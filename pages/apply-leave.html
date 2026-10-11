@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Leave | ABC University Leave Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <img src="../assets/logo.png" alt="ABC University logo" class="brand-logo">
+        <span class="brand-text">ABC University<small>Leave Management Portal</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="apply-leave.html">Apply for Leave</a></li>
+        <li><a href="leave-status.html">Leave Status</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <div class="form-header">
+      <h1>Apply for Leave</h1>
+      <p>Fill in the details below to submit a new leave application.</p>
+    </div>
+
+    <div class="form-card">
+      <div class="success-box" id="successBox"></div>
+
+      <form id="leaveForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="field-label" for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="field-label" for="rollNumber">Roll Number</label>
+            <input type="text" id="rollNumber" name="rollNumber" class="form-input input-roll" placeholder="e.g. BTCS2026XXX" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Leave Type</span>
+          <div class="option-group">
+            <label class="option">
+              <input type="radio" id="fullDay" name="fullDay" value="full" checked>
+              Full Day
+            </label>
+            <label class="option">
+              <input type="radio" id="halfDay" name="halfDay" value="half">
+              Half Day
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Leave Category</span>
+          <div class="option-group">
+            <label class="option">
+              <input type="checkbox" name="category" value="medical">
+              Medical
+            </label>
+            <label class="option">
+              <input type="checkbox" name="category" value="personal">
+              Personal
+            </label>
+            <label class="option">
+              <input type="checkbox" name="category" value="academic">
+              Academic
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="field-label" for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="field-label" for="endDate">End Date</label>
+            <input type="text" id="endDate" name="endDate" class="form-input" required>
+          </div>
+        </div>
+
+        <div class="days-box">
+          Total leave days: <strong id="daysDisplay">-</strong>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="reason">Reason for Leave</label>
+          <textarea id="reason" name="reason" class="form-textarea" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" id="resetBtn" class="btn-reset">Reset</button>
+        </div>
+      </form>
+
+      <button type="submit" id="submitBtn" class="btn-submit">Submit Application</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> ABC University. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/leave-form.js"></script>
+</body>
+</html>

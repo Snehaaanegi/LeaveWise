@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Status | ABC University Leave Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <img src="../assets/logo.png" alt="ABC University logo" class="brand-logo">
+        <span class="brand-text">ABC University<small>Leave Management Portal</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="apply-leave.html">Apply for Leave</a></li>
+        <li><a href="leave-status.html">Leave Status</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <div class="dashboard-header">
+      <h1>Leave Status</h1>
+      <p>Track all the leave applications you have submitted.</p>
+    </div>
+
+    <div class="table-card">
+      <div class="table-toolbar">
+        <div class="filter-group">
+          <label for="statusFilter">Show:</label>
+          <select id="statusFilter" class="filter-select">
+            <option value="All">All applications</option>
+            <option value="Pending">Pending</option>
+            <option value="Approved">Approved</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
+        <p class="result-count" id="resultCount">Showing 5 applications</p>
+      </div>
+
+      <table class="data-table status-table" id="statusTable">
+        <thead>
+          <tr>
+            <th>Application ID</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-status="Approved">
+            <td>LV-1001</td>
+            <td>Full Day</td>
+            <td>12 Sep 2026</td>
+            <td>12 Sep 2026</td>
+            <td class="reason-cell">Medical check-up at the district hospital</td>
+            <td><span class="badge badge-approved">Approved</span></td>
+            <td>
+              <a href="#" class="pdf-link" data-id="LV-1001" title="Download PDF">
+                <img src="../assets/pdf-download.png" alt="PDF" class="pdf-img">
+              </a>
+            </td>
+          </tr>
+          <tr data-status="Approved">
+            <td>LV-1002</td>
+            <td>Half Day</td>
+            <td>21 Sep 2026</td>
+            <td>21 Sep 2026</td>
+            <td class="reason-cell">Bank visit for education loan documents</td>
+            <td><span class="badge badge-approved">Approved</span></td>
+            <td>
+              <a href="#" class="pdf-link" data-id="LV-1002" title="Download PDF">
+                <img src="../assets/pdf-download.png" alt="PDF" class="pdf-img">
+              </a>
+            </td>
+          </tr>
+          <tr data-status="Pending">
+            <td>LV-1003</td>
+            <td>Full Day</td>
+            <td>30 Sep 2026</td>
+            <td>02 Oct 2026</td>
+            <td class="reason-cell">Attending my cousin's wedding ceremony in Udaipur, which includes several family functions over multiple days, followed by a long train journey back home with my parents and relatives</td>
+            <td><span class="badge badge-pending">Pending</span></td>
+            <td>
+              <a href="#" class="pdf-link" data-id="LV-1003" title="Download PDF">
+                <img src="../assets/pdf-download.png" alt="PDF" class="pdf-img">
+              </a>
+            </td>
+          </tr>
+          <tr data-status="Rejected">
+            <td>LV-1004</td>
+            <td>Full Day</td>
+            <td>05 Oct 2026</td>
+            <td>05 Oct 2026</td>
+            <td class="reason-cell">Fever and cold, doctor advised rest</td>
+            <td><span class="badge badge-rejected">Rejected</span></td>
+            <td>
+              <a href="#" class="pdf-link" data-id="LV-1004" title="Download PDF">
+                <img src="../assets/pdf-download.png" alt="PDF" class="pdf-img">
+              </a>
+            </td>
+          </tr>
+          <tr data-status="Pending">
+            <td>LV-1005</td>
+            <td>Half Day</td>
+            <td>20 Oct 2026</td>
+            <td>20 Oct 2026</td>
+            <td class="reason-cell">Family function</td>
+            <td><span class="badge badge-pending">Pending</span></td>
+            <td>
+              <a href="#" class="pdf-link" data-id="LV-1005" title="Download PDF">
+                <img src="../assets/pdf-download.png" alt="PDF" class="pdf-img">
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> ABC University. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/status.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ABC University Leave Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <img src="../assets/logo.png" alt="ABC University logo" class="brand-logo">
+        <span class="brand-text">ABC University<small>Leave Management Portal</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="apply-leave.html">Apply for Leave</a></li>
+        <li><a href="leave-status.html">Leave Status</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <div class="dashboard-header">
+      <h1>Welcome, Student</h1>
+      <p>Here is a quick look at your leave record for this semester.</p>
+    </div>
+
+    <section class="summary-grid">
+      <div class="summary-card total">
+        <span class="summary-label">Total Leave</span>
+        <span class="summary-number">20</span>
+      </div>
+      <div class="summary-card used">
+        <span class="summary-label">Used Leave</span>
+        <span class="summary-number">8</span>
+      </div>
+      <div class="summary-card remaining">
+        <span class="summary-label">Remaining Leave</span>
+        <span class="summary-number">12</span>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <div class="leave-card">
+        <h2 class="card-title">Recent Leave Applications</h2>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Dates</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LV-1005</td>
+                <td>Half Day</td>
+                <td>20 Oct 2026</td>
+                <td><span class="badge badge-pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>LV-1004</td>
+                <td>Full Day</td>
+                <td>05 Oct 2026</td>
+                <td><span class="badge badge-rejected">Rejected</span></td>
+              </tr>
+              <tr>
+                <td>LV-1003</td>
+                <td>Full Day</td>
+                <td>30 Sep - 02 Oct 2026</td>
+                <td><span class="badge badge-pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>LV-1002</td>
+                <td>Half Day</td>
+                <td>21 Sep 2026</td>
+                <td><span class="badge badge-approved">Approved</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="leave-status.html" class="card-link">View all applications</a>
+      </div>
+
+      <div class="side-column">
+        <div class="info-card">
+          <h2 class="card-title">Current Leave Balance</h2>
+          <p class="balance-text">12 of 20 days remaining</p>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%;"></div>
+          </div>
+          <p class="balance-note">8 days used so far</p>
+        </div>
+
+        <div class="info-card">
+          <h2 class="card-title">Student Profile</h2>
+          <div class="profile">
+            <div class="avatar">SN</div>
+            <div class="profile-details">
+              <p><strong>Name:</strong> Sneha Negi</p>
+              <p><strong>Roll Number:</strong> BTCS2026XXX</p>
+              <p><strong>Course:</strong> B.Tech Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> ABC University. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
